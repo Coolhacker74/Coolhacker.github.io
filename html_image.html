@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Welcome-Coolhacker</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="css/html.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script src="js/loader2.js"></script>
+<script data-cfasync="false" type="text/javascript">
+var k42 = false;
+
+k42 = true;
+
+</script>
+<script data-cfasync="false" type="text/javascript">
+    window.snigelPubConf = {
+    "adengine": {
+
+      "activeAdUnits": ["main_leaderboard", "sidebar_top", "bottom_left", "bottom_right"]
+
+  }
+}
+uic_r_a()
+</script>
+<script async data-cfasync="false" src="js/loader.js" type="text/javascript"></script>
+<script src="js/loader3.js"></script>
+<script type='text/javascript'>
+var stickyadstatus = "";
+function fix_stickyad() {
+  document.getElementById("stickypos").style.position = "sticky";
+  var elem = document.getElementById("stickyadcontainer");
+  if (!elem) {return false;}
+  if (document.getElementById("skyscraper")) {
+    var skyWidth = Number(Cool_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", ""));  
+    }
+  else {
+    var skyWidth = Number(Cool_getStyleValue(document.getElementById("right"), "width").replace("px", ""));  
+  }
+  elem.style.width = skyWidth + "px";
+  if (window.innerWidth <= 992) {
+    elem.style.position = "";
+    elem.style.top = stickypos + "px";
+    return false;
+  }
+  var stickypos = document.getElementById("stickypos").offsetTop;
+  var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  var adHeight = Number(Cool_getStyleValue(elem, "height").replace("px", ""));
+  if (stickyadstatus == "") {
+    if ((stickypos - docTop) < 60) {
+      elem.style.position = "fixed";
+      elem.style.top = "60px";
+      stickyadstatus = "sticky";
+      document.getElementById("stickypos").style.position = "sticky";
+
+    }
+  } else {
+    if ((docTop + 60) - stickypos < 0) {  
+      elem.style.position = "";
+      elem.style.top = stickypos + "px";
+      stickyadstatus = "";
+      document.getElementById("stickypos").style.position = "static";
+    }
+  }
+  if (stickyadstatus == "sticky") {
+    if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {
+      elem.style.position = "absolute";
+      elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";
+      document.getElementById("stickypos").style.position = "static";
+    } else {
+        elem.style.position = "fixed";
+        elem.style.top = "60px";
+        stickyadstatus = "sticky";
+        document.getElementById("stickypos").style.position = "sticky";
+    }
+  }
+}
+function Cool_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+    return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+    return elmnt.currentStyle[style];
+  }
+}
+</script>
+
+<style>
+.spes_tagname {color:brown;}
+.spes_tag {color:mediumblue;}
+body.darkpagetheme .spes_tagname {color:#ff9999;}
+body.darkpagetheme .spes_tag {color:#88ccbb;}
+</style>
+</head>
+<body>
+<script>
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  var y = localStorage.getItem("preferredpagemode");  
+  if (x == "dark") {
+    document.body.className += " darktheme";
+    ga('send', 'event', 'theme' , "darkcode");    
+  }
+  if (y == "dark") {
+    document.body.className += " darkpagetheme";
+    ga('send', 'event', 'theme' , "darkpage");
+  }
+})();
+</script>
+
+<style>
+@media screen and (max-width: 1080px) {
+  .ws-hide-1080 {
+    ddddisplay: none !important;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .topnavmain_video {
+    display: none !important;
+  }
+}
+</style>
+<header class="header">
+
+   <a href="home.html" class="logo"> <i class="fas fa-lightbulb"></i>Coolhacker</a>
+
+   <nav class="navbar">
+      <div id="close-navbar" class="fas fa-times"></div>
+      <a href="home.html">home</a>
+      <a href="about.html">about</a>
+      <a href="courses.html">courses</a>
+      <a href="contact.html">contact</a>
+   </nav>
+
+   <div class="icons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+   </div>
+
+</header>
+
+<script>
+(
+function setThemeCheckboxes() {
+  var x = localStorage.getItem("preferredmode");
+  var y = localStorage.getItem("preferredpagemode");  
+  if (x == "dark") {
+    document.getElementById("radio_darkcode").checked = true;
+    
+  }
+  if (y == "dark") {
+    document.getElementById("radio_darkpage").checked = true;
+  }
+})();
+
+function mouseoverdarkicon() {
+  if(window.matchMedia("(pointer: coarse)").matches) {
+    return false;
+  }
+  var a = document.getElementById("darkmodemenu");
+  a.style.top = "44px";
+}
+function mouseoutofdarkicon() {
+  var a = document.getElementById("darkmodemenu");
+  a.style.top = "-40px";
+}
+function changepagetheme(n) {
+  var a = document.getElementById("radio_darkcode");
+  var b = document.getElementById("radio_darkpage");
+  document.body.className = document.body.className.replace("darktheme", "");
+  document.body.className = document.body.className.replace("darkpagetheme", "");    
+  document.body.className = document.body.className.replace("  ", " ");
+  if (a.checked && b.checked) {
+    localStorage.setItem("preferredmode", "light");
+    localStorage.setItem("preferredpagemode", "light");
+    a.checked = false;
+    b.checked = false;    
+  } else {
+    document.body.className += " darktheme";
+    document.body.className += " darkpagetheme";  
+    localStorage.setItem("preferredmode", "dark");
+    localStorage.setItem("preferredpagemode", "dark");
+    a.checked = true;
+    b.checked = true;    
+  }
+}
+
+
+function click_darkpage() {
+  var b = document.getElementById("radio_darkpage");
+  if (b.checked) {
+    document.body.className += " darkpagetheme";
+    document.body.className = document.body.className.replace("  ", " ");    
+    localStorage.setItem("preferredpagemode", "dark");
+  } else {
+    document.body.className = document.body.className.replace("darkpagetheme", "");
+    document.body.className = document.body.className.replace("  ", " ");    
+    localStorage.setItem("preferredpagemode", "light");
+  }
+}
+
+function click_darkcode() {
+  var a = document.getElementById("radio_darkcode");
+  if (a.checked) {
+    document.body.className += " darktheme";
+    document.body.className = document.body.className.replace("  ", " ");    
+    localStorage.setItem("preferredmode", "dark");
+  } else {
+    document.body.className = document.body.className.replace("darktheme", "");
+    document.body.className = document.body.className.replace("  ", " ");
+    localStorage.setItem("preferredmode", "light");
+  }
+}
+
+</script>
+
+
+<div class='cool-sidebar cool-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div id='leftmenuinnerinner'>
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='cool-button cool-hide-large cool-large cool-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left"><span class="left_h2">HTML</span> Tutorial</h2>
+<a target="_top" href="html.html">HTML HOME</a>
+<a target="_top" href="html_intro.html">HTML Introduction</a>
+<a target="_top" href="html_editor.html">HTML Editors</a>
+<a target="_top" href="html_basic.html">HTML Basic</a>
+<a target="_top" href="html_elements.html">HTML Elements</a>
+<a target="_top" href="html_attribute.html">HTML Attributes</a>
+<a target="_top" href="html_heading.html">HTML Headings</a>
+<a target="_top" href="html_paragraph.html">HTML Paragraphs</a>
+<a target="_top" href="html_style.html">HTML Styles</a>
+<a target="_top" href="html_formatting.html">HTML Formatting</a>
+<a target="_top" href="html_quotation.html">HTML Quotations</a>
+<a target="_top" href="html_comment.html">HTML Comments</a>
+<a target="_top" href="html_color.html">HTML Colors</a>
+<a target="_top" href="html_css.html">HTML CSS</a>
+<a target="_top" href="html_link.html">HTML Links</a>
+<a target="_top" href="html_image.html">HTML Images</a>
+<a target="_top" href="html_favicon.html">HTML Favicon</a>
+<a target="_top" href="comingsoon.html">HTML Tables</a>
+<div class="tut_overview">
+  <a target="_top" href="comingsoon.html">HTML Tables</a>
+  <a target="_top" href="comingsoon.html">Table Borders</a>
+  <a target="_top" href="comingsoon.html">Table Sizes</a>
+  <a target="_top" href="comingsoon.html">Table Headers</a>
+  <a target="_top" href="comingsoon.html">Padding &amp; Spacing</a>
+  <a target="_top" href="comingsoon.html">Colspan &amp; Rowspan</a>
+  <a target="_top" href="comingsoon.html">Table Styling</a>
+  <a target="_top" href="comingsoon.html">Table Colgroup</a>
+</div>
+
+
+
+<a target="_top" href="comingsoon.html">HTML Lists</a>
+<div class="tut_overview">
+<a target="_top" href="comingsoon.html">Lists</a>
+<a target="_top" href="comingsoon.html">Unordered Lists</a>
+<a target="_top" href="comingsoon.html">Ordered Lists</a>
+<a target="_top" href="comingsoon.html">Other Lists</a>
+</div>
+<a target="_top" href="comingsoon.html">HTML Block &amp; Inline</a>
+<a target="_top" href="comingsoon.html">HTML Classes</a>
+<a target="_top" href="comingsoon.html">HTML Id</a>
+<a target="_top" href="comingsoon.html">HTML Iframes</a>
+<a target="_top" href="comingsoon.html">HTML JavaScript</a>
+<a target="_top" href="comingsoon.html">HTML File Paths</a>
+<a target="_top" href="comingsoon.html">HTML Head</a>
+<a target="_top" href="comingsoon.html">HTML Layout</a>
+<a target="_top" href="comingsoon.html">HTML Responsive</a>
+<a target="_top" href="comingsoon.html">HTML Computercode</a>
+<a target="_top" href="comingsoon.html">HTML Semantics</a>
+<a target="_top" href="comingsoon.html">HTML Style Guide</a>
+<a target="_top" href="comingsoon.html">HTML Entities</a>
+<a target="_top" href="comingsoon.html">HTML Symbols</a>
+<a target="_top" href="comingsoon.html">HTML Emojis</a>
+<a target="_top" href="comingsoon.html">HTML Charset</a>
+<a target="_top" href="comingsoon.html">HTML URL Encode</a>
+<a target="_top" href="comingsoon.html">HTML vs. XHTML</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Forms</h2>
+<a target="_top" href="comingsoon.html">HTML Forms</a>
+<a target="_top" href="comingsoon.html">HTML Form Attributes</a>
+<a target="_top" href="comingsoon.html">HTML Form Elements</a>
+<a target="_top" href="comingsoon.html">HTML Input Types</a>
+<a target="_top" href="comingsoon.html">HTML Input Attributes</a>
+<a target="_top" href="comingsoon.html">HTML Input Form Attributes</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Graphics</h2>
+<a target="_top" href="comingsoon.html">HTML Canvas</a>
+<a target="_top" href="comingsoon.html">HTML SVG</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Media</h2>
+<a target="_top" href="comingsoon.html">HTML Media</a>
+<a target="_top" href="comingsoon.html">HTML Video</a>
+<a target="_top" href="comingsoon.html">HTML Audio</a>
+<a target="_top" href="comingsoon.html">HTML Plug-ins</a>
+<a target="_top" href="comingsoon.html">HTML YouTube</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> APIs</h2>
+<a target="_top" href="comingsoon.html">HTML Geolocation</a>
+<a target="_top" href="comingsoon.html">HTML Drag/Drop</a>
+<a target="_top" href="comingsoon.html">HTML Web Storage</a>
+<a target="_top" href="comingsoon.html">HTML Web Workers</a>
+<a target="_top" href="comingsoon.html">HTML SSE</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Examples</h2>
+<a target="_top" href="comingsoon.html">HTML Examples</a>
+<a target="_top" href="comingsoon.html">HTML Quiz</a>
+<a target="_top" href="comingsoon.html">HTML Exercises</a>
+<a target="_top" href="comingsoon.html">HTML Certificate</a>
+<a target="_top" href="comingsoon.html">HTML Summary</a>
+<a target="_top" href="comingsoon.html">HTML Accessibility</a>
+<br>
+<br>
+    </div>
+  </div>
+</div>
+<div class='cool-main cool-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='cool-row cool-white'>
+    <div class='cool-col l10 m12' id='main'>
+      <div id='mainLeaderboard' style='overflow:hidden;'>
+        <!-- MainLeaderboard-->
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="adngin-main_leaderboard-0"></div>
+        <!-- adspace leaderboard -->
+
+      </div>
+<h1>HTML <span class="color_h1">Images</span></h1>
+<div class="cool-clear nextprev">
+  <a class="cool-left cool-btn" href="html_link.html">&#10094; Previous</a>
+<a class="cool-right cool-btn" href="html_favicon.html">Next &#10095;</a>
+</div>
+<hr>
+<p class="intro">Images can improve the design and the appearance of a web page.</p>
+<hr>
+
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+ &lt;img src=&quot;Coolhacker.jpg&quot; 
+alt=&quot;Coolhacker&quot;&gt;<br>
+</div>
+</div>
+
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+ &lt;img src=&quot;girl.jpg&quot; 
+alt=&quot;Girl&quot;&gt;</div>
+</div>
+
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+ &lt;img src=&quot;img.jpg&quot; 
+alt=&quot;Coolhacker&quot;&gt;<br>
+</div>
+</div>
+<hr>
+
+<h2>HTML Images Syntax</h2>
+<p>The HTML <code class="cool-codespan">&lt;img&gt;</code> tag is used to embed an 
+image in a web page.</p>
+<p>Images are not technically inserted into a web page; images are linked to web 
+pages. The <code class="cool-codespan">&lt;img&gt;</code> tag creates a holding 
+space for the referenced image.</p>
+<p>The <code class="cool-codespan">&lt;img&gt;</code> tag&nbsp;is empty, it contains attributes only, and does not 
+have a closing tag.</p>
+<p>The <code class="cool-codespan">&lt;img&gt;</code> tag has two required 
+attributes:</p>
+<ul>
+  <li>src - Specifies the path to the image</li>
+  <li>alt - Specifies an alternate text for the image</li>
+</ul>
+
+<div class="cool-example">
+<h3>Syntax</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;img src=&quot;<i>url</i>&quot; alt=&quot;<em>alternatetext</em>&quot;&gt;
+</div></div>
+<hr>
+
+<h2>The src Attribute</h2>
+<p>The required <code class="cool-codespan">src</code> attribute specifies the path (URL) to the image.</p>
+<p><strong>Note:</strong> When a web page loads, it is the browser, at that 
+moment, that gets the image from a web server and inserts it into the page. 
+Therefore, make sure that the image actually stays in the same spot in relation 
+to the web page, otherwise your visitors will get a broken link icon. The broken 
+link icon and the <code class="cool-codespan">alt</code> text are shown if the browser cannot find the image.</p>
+<div class="cool-example">
+  <h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;img src=&quot;boy.jpg&quot; alt=&quot; boy&quot;&gt;
+</div>
+</div>
+
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+  <div id="adngin-mid_content-0"></div>
+  
+</div>
+<hr>
+<h2>The alt Attribute</h2>
+<p>The required <code class="cool-codespan">alt</code> attribute provides an alternate text for an image, if the user for 
+some reason cannot view it (because of slow connection, an error in the src 
+attribute, or if the user uses a screen reader).</p>
+<p>The value of the <code class="cool-codespan">alt</code> attribute should describe the image:</p>
+<div class="cool-example">
+  <h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;img src=&quot;coolboy.jpg&quot; alt=&quot;coolboy&quot;&gt;
+</div>
+</div>
+<p>If a browser cannot find an image, it will display the value of the <code class="cool-codespan">alt</code> 
+attribute:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;img src=&quot;name.gif&quot; alt=&quot;hacker&quot;&gt;
+</div>
+</div>
+<div class="cool-panel cool-note">
+<p><strong>Tip:</strong> A screen reader is a software program that reads the HTML code, and allows the user to &quot;listen&quot; to the content. Screen readers are useful 
+for people who are visually impaired or learning disabled.</p>
+</div>
+<hr>
+
+<h2>Image Size - Width and Height</h2>
+<p>You can use the <code class="cool-codespan">style</code> attribute to specify the width and 
+height of an image.</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;img src=&quot;girl.jpg&quot; alt=&quot;Girl&quot; style=&quot;width:500px;height:600px;&quot;&gt;
+</div>
+</div>
+
+<p>Alternatively, you can use the <code class="cool-codespan">width</code> and <code class="cool-codespan">height</code> attributes:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;img src=&quot;girl.jpg&quot; alt=&quot;Girl&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;
+</div>
+</div>
+<p>The <code class="cool-codespan">width</code> and <code class="cool-codespan">height</code> attributes always define the width and height of the 
+image in pixels.</p>
+
+<div class="cool-panel cool-note">
+  <p><strong>Note:</strong> Always specify the width and height of an image. If width and height are not specified, the 
+  web page 
+  might flicker while the image loads.</p>
+</div>
+<hr>
+
+<h2>Width and Height, or Style?</h2>
+<p>The <code class="cool-codespan">width</code>, <code class="cool-codespan">height</code>, and <code class="cool-codespan">style</code> attributes are 
+all valid in HTML.</p>
+<p>However, we suggest using the <code class="cool-codespan">style</code> attribute. It prevents styles sheets from changing 
+the size of images:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+ &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;style&gt;<br>img { <br>&nbsp;&nbsp;width: 100%; <br>}<br>
+ &lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;img src=&quot;html5.gif&quot; alt=&quot;HTML5 Icon&quot; width=&quot;128&quot; height=&quot;128&quot;&gt;<br><br>&lt;img src=&quot;html5.gif&quot; alt=&quot;HTML5 Icon&quot; style=&quot;width:128px;height:128px;&quot;&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+</div>
+<hr>
+
+<h2>Images in Another Folder</h2>
+<p>If you have your images in a sub-folder, you must include the folder 
+name in the <code class="cool-codespan">src</code> attribute:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;img src=&quot;/images/html5.gif&quot; 
+alt=&quot;HTML5 Icon&quot; style=&quot;width:128px;height:128px;&quot;&gt;
+</div>
+</div>
+<hr>
+
+<h2>Images on Another Server/Website</h2>
+<p>Some web sites point to an image on another server.</p>
+<p>To point to an image on another server, you must specify an absolute (full) 
+URL in the <code class="cool-codespan">src</code> attribute:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;img src=&quot;https://www.Coolhacker.com/images/coolhacker.jpg&quot; alt=&quot;Coolhacker.com&quot;&gt;
+</div>
+</div>
+<hr>
+
+<h2>Animated Images</h2>
+<p>HTML allows animated GIFs:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;img src=&quot;programming.gif&quot; alt=&quot;Computer Man&quot; style=&quot;width:48px;height:48px;&quot;&gt;
+</div>
+</div>
+<hr>
+
+<h2>Image as a Link</h2>
+<p>To use an image as a link, put the <code class="cool-codespan">&lt;img&gt;</code> tag inside the <code class="cool-codespan">&lt;a&gt;</code> 
+tag:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;a href=&quot;home.html&quot;&gt;<br>&nbsp; &lt;img src=&quot;Cool.gif&quot; alt=&quot;HTML tutorial&quot; 
+style=&quot;width:42px;height:42px;&quot;&gt;<br>&lt;/a&gt;
+</div>
+</div>
+<hr>
+
+<h2>Image Floating</h2>
+<p>Use the CSS <code class="cool-codespan">float</code> property to let the image float to the right or to the left of a text:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;p&gt;&lt;img src=&quot;Cool.gif&quot; alt=&quot;Cool Boy&quot;
+style=&quot;float:right;width:42px;height:42px;&quot;&gt;<br>
+ The image will float to the right of 
+the text.&lt;/p&gt;<br><br>&lt;p&gt;&lt;img src=&quot;Cool.gif&quot; alt=&quot;Cool Boy&quot;
+style=&quot;float:left;width:42px;height:42px;&quot;&gt;<br>
+ The image will float to the left of 
+the text.&lt;/p&gt;</div>
+</div>
+<hr>
+
+<h2>Common Image Formats</h2>
+<p>Here are the most common image file types, which are supported in all browsers 
+(Chrome, Edge, Firefox, Safari, Opera):</p>
+<table class="ws-table-all notranslate">
+<tr>
+<th>Abbreviation</th>
+<th>File Format</th>
+<th>File Extension</th>
+</tr>
+<tr>
+<td>APNG</td>
+<td>Animated Portable Network Graphics</td>
+<td>.apng</td>
+</tr>
+<tr>
+<td>GIF</td>
+<td>Graphics Interchange Format</td>
+<td>.gif</td>
+</tr>
+<tr>
+<td>ICO</td>
+<td>Microsoft Icon</td>
+<td>.ico, .cur </td>
+</tr>
+<tr>
+<td>JPEG</td>
+<td>Joint Photographic Expert Group image</td>
+<td>.jpg, .jpeg, .jfif, .pjpeg, .pjp</td>
+</tr>
+<tr>
+<td>PNG</td>
+<td>Portable Network Graphics</td>
+<td>.png</td>
+</tr>
+<tr>
+<td>SVG</td>
+<td>Scalable Vector Graphics</td>
+<td>.svg</td>
+</tr>
+</table>
+<hr>
+
+<h2>Chapter Summary</h2>
+<ul>
+  <li>Use the HTML <code class="cool-codespan">&lt;img&gt;</code> element to define an image</li>
+  <li>Use the HTML <code class="cool-codespan">src</code> attribute to define the URL of the image</li>
+  <li>Use the HTML <code class="cool-codespan">alt</code> attribute to define an alternate text for an image, if it cannot be displayed</li>
+  <li>Use the HTML <code class="cool-codespan">width</code> and <code class="cool-codespan">height</code> attributes 
+  or the CSS <code class="cool-codespan">width</code> and <code class="cool-codespan">height</code> 
+  properties to define the size of the image</li>
+  <li>Use the CSS <code class="cool-codespan">float</code> property to let the image float 
+  to the left or to the right</li>
+</ul>
+<div class="cool-panel cool-note">
+  <p><strong>Note:</strong> Loading large images takes time, and can slow down your 
+  web page. Use images carefully.</p>
+</div>
+<hr>
+
+<br>
+<div class="cool-clear nextprev">
+  <a class="cool-left cool-btn" href="html_link.html">&#10094; Previous</a>
+<a class="cool-right cool-btn" href="html_favicon.html">Next &#10095;</a>
+</div>
+<div id="mypagediv2" style="position:relative;text-align:center;"></div>
+<br>
+
+</div>
+
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+  <div id="stickyadcontainer">
+    <div style="position:relative;margin:auto;">
+      
+      <div id="adngin-sidebar_sticky-0"></div>
+        <script>
+        function secondSnigel() {
+          if(window.adngin && window.adngin.adnginLoaderReady) {
+            if (Number(Cool_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {         
+              if (document.getElementById("adngin-mid_content-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+              } else {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+              }
+            } else {
+              if (document.getElementById("adngin-mid_content-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+              }
+            }
+          } else {
+            window.addEventListener('adnginLoaderReady', function() {
+              if (Number(Cool_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+                if (document.getElementById("adngin-mid_content-0")) {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+                } else {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+                }
+              } else {
+                if (document.getElementById("adngin-mid_content-0")) {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+                }
+              }
+            });
+          }
+        }
+      </script>
+      
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

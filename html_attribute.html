@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Welcome-Coolhacker</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="css/html.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3855518-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'GTM-WJ88MZ5');
+ga('send', 'pageview');
+</script>
+
+<script src="js/loader2.js"></script>
+<script data-cfasync="false" type="text/javascript">
+var k42 = false;
+
+k42 = true;
+
+</script>
+<script data-cfasync="false" type="text/javascript">
+    window.snigelPubConf = {
+    "adengine": {
+
+      "activeAdUnits": ["main_leaderboard", "sidebar_top", "bottom_left", "bottom_right"]
+
+  }
+}
+uic_r_a()
+</script>
+<script async data-cfasync="false" src="js/loader.js" type="text/javascript"></script>
+<script src="js/loader3.js"></script>
+<script type='text/javascript'>
+var stickyadstatus = "";
+function fix_stickyad() {
+  document.getElementById("stickypos").style.position = "sticky";
+  var elem = document.getElementById("stickyadcontainer");
+  if (!elem) {return false;}
+  if (document.getElementById("skyscraper")) {
+    var skyWidth = Number(Cool_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", ""));  
+    }
+  else {
+    var skyWidth = Number(Cool_getStyleValue(document.getElementById("right"), "width").replace("px", ""));  
+  }
+  elem.style.width = skyWidth + "px";
+  if (window.innerWidth <= 992) {
+    elem.style.position = "";
+    elem.style.top = stickypos + "px";
+    return false;
+  }
+  var stickypos = document.getElementById("stickypos").offsetTop;
+  var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  var adHeight = Number(Cool_getStyleValue(elem, "height").replace("px", ""));
+  if (stickyadstatus == "") {
+    if ((stickypos - docTop) < 60) {
+      elem.style.position = "fixed";
+      elem.style.top = "60px";
+      stickyadstatus = "sticky";
+      document.getElementById("stickypos").style.position = "sticky";
+
+    }
+  } else {
+    if ((docTop + 60) - stickypos < 0) {  
+      elem.style.position = "";
+      elem.style.top = stickypos + "px";
+      stickyadstatus = "";
+      document.getElementById("stickypos").style.position = "static";
+    }
+  }
+  if (stickyadstatus == "sticky") {
+    if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {
+      elem.style.position = "absolute";
+      elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";
+      document.getElementById("stickypos").style.position = "static";
+    } else {
+        elem.style.position = "fixed";
+        elem.style.top = "60px";
+        stickyadstatus = "sticky";
+        document.getElementById("stickypos").style.position = "sticky";
+    }
+  }
+}
+function Cool_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+    return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+    return elmnt.currentStyle[style];
+  }
+}
+</script>
+
+<style>
+.spes_tagname {color:brown;}
+.spes_tag {color:mediumblue;}
+body.darkpagetheme .spes_tagname {color:#ff9999;}
+body.darkpagetheme .spes_tag {color:#88ccbb;}
+</style>
+</head>
+<body>
+<script>
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  var y = localStorage.getItem("preferredpagemode");  
+  if (x == "dark") {
+    document.body.className += " darktheme";
+    ga('send', 'event', 'theme' , "darkcode");    
+  }
+  if (y == "dark") {
+    document.body.className += " darkpagetheme";
+    ga('send', 'event', 'theme' , "darkpage");
+  }
+})();
+</script>
+
+<style>
+@media screen and (max-width: 1080px) {
+  .ws-hide-1080 {
+    ddddisplay: none !important;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .topnavmain_video {
+    display: none !important;
+  }
+}
+</style>
+<header class="header">
+
+   <a href="home.html" class="logo"> <i class="fas fa-lightbulb"></i>Coolhacker</a>
+
+   <nav class="navbar">
+      <div id="close-navbar" class="fas fa-times"></div>
+      <a href="home.html">home</a>
+      <a href="about.html">about</a>
+      <a href="courses.html">courses</a>
+      <a href="contact.html">contact</a>
+   </nav>
+
+   <div class="icons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+   </div>
+
+</header>
+<script>
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  var y = localStorage.getItem("preferredpagemode");  
+  if (x == "dark") {
+    document.body.className += " darktheme";
+    ga('send', 'event', 'theme' , "darkcode");    
+  }
+  if (y == "dark") {
+    document.body.className += " darkpagetheme";
+    ga('send', 'event', 'theme' , "darkpage");
+  }
+})();
+</script>
+<script>
+(
+function setThemeCheckboxes() {
+  var x = localStorage.getItem("preferredmode");
+  var y = localStorage.getItem("preferredpagemode");  
+  if (x == "dark") {
+    document.getElementById("radio_darkcode").checked = true;
+    
+  }
+  if (y == "dark") {
+    document.getElementById("radio_darkpage").checked = true;
+  }
+})();
+
+function mouseoverdarkicon() {
+  if(window.matchMedia("(pointer: coarse)").matches) {
+    return false;
+  }
+  var a = document.getElementById("darkmodemenu");
+  a.style.top = "44px";
+}
+function mouseoutofdarkicon() {
+  var a = document.getElementById("darkmodemenu");
+  a.style.top = "-40px";
+}
+function changepagetheme(n) {
+  var a = document.getElementById("radio_darkcode");
+  var b = document.getElementById("radio_darkpage");
+  document.body.className = document.body.className.replace("darktheme", "");
+  document.body.className = document.body.className.replace("darkpagetheme", "");    
+  document.body.className = document.body.className.replace("  ", " ");
+  if (a.checked && b.checked) {
+    localStorage.setItem("preferredmode", "light");
+    localStorage.setItem("preferredpagemode", "light");
+    a.checked = false;
+    b.checked = false;    
+  } else {
+    document.body.className += " darktheme";
+    document.body.className += " darkpagetheme";  
+    localStorage.setItem("preferredmode", "dark");
+    localStorage.setItem("preferredpagemode", "dark");
+    a.checked = true;
+    b.checked = true;    
+  }
+}
+
+
+function click_darkpage() {
+  var b = document.getElementById("radio_darkpage");
+  if (b.checked) {
+    document.body.className += " darkpagetheme";
+    document.body.className = document.body.className.replace("  ", " ");    
+    localStorage.setItem("preferredpagemode", "dark");
+  } else {
+    document.body.className = document.body.className.replace("darkpagetheme", "");
+    document.body.className = document.body.className.replace("  ", " ");    
+    localStorage.setItem("preferredpagemode", "light");
+  }
+}
+
+function click_darkcode() {
+  var a = document.getElementById("radio_darkcode");
+  if (a.checked) {
+    document.body.className += " darktheme";
+    document.body.className = document.body.className.replace("  ", " ");    
+    localStorage.setItem("preferredmode", "dark");
+  } else {
+    document.body.className = document.body.className.replace("darktheme", "");
+    document.body.className = document.body.className.replace("  ", " ");
+    localStorage.setItem("preferredmode", "light");
+  }
+}
+
+</script>
+
+
+<div class='cool-sidebar cool-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div id='leftmenuinnerinner'>
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='cool-button cool-hide-large cool-large cool-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left"><span class="left_h2">HTML</span> Tutorial</h2>
+<a target="_top" href="html.html">HTML HOME</a>
+<a target="_top" href="html_intro.html">HTML Introduction</a>
+<a target="_top" href="html_editor.html">HTML Editors</a>
+<a target="_top" href="html_basic.html">HTML Basic</a>
+<a target="_top" href="html_elements.html">HTML Elements</a>
+<a target="_top" href="html_attribute.html">HTML Attributes</a>
+<a target="_top" href="html_heading.html">HTML Headings</a>
+<a target="_top" href="html_paragraph.html">HTML Paragraphs</a>
+<a target="_top" href="html_style.html">HTML Styles</a>
+<a target="_top" href="html_formatting.html">HTML Formatting</a>
+<a target="_top" href="html_quotation.html">HTML Quotations</a>
+<a target="_top" href="html_comment.html">HTML Comments</a>
+<a target="_top" href="html_color.html">HTML Colors</a>
+<a target="_top" href="html_css.html">HTML CSS</a>
+<a target="_top" href="html_link.html">HTML Links</a>
+<a target="_top" href="html_image.html">HTML Images</a>
+<a target="_top" href="html_favicon.html">HTML Favicon</a>
+<a target="_top" href="comingsoon.html">HTML Tables</a>
+<div class="tut_overview">
+  <a target="_top" href="comingsoon.html">HTML Tables</a>
+  <a target="_top" href="comingsoon.html">Table Borders</a>
+  <a target="_top" href="comingsoon.html">Table Sizes</a>
+  <a target="_top" href="comingsoon.html">Table Headers</a>
+  <a target="_top" href="comingsoon.html">Padding &amp; Spacing</a>
+  <a target="_top" href="comingsoon.html">Colspan &amp; Rowspan</a>
+  <a target="_top" href="comingsoon.html">Table Styling</a>
+  <a target="_top" href="comingsoon.html">Table Colgroup</a>
+</div>
+
+
+
+<a target="_top" href="comingsoon.html">HTML Lists</a>
+<div class="tut_overview">
+<a target="_top" href="comingsoon.html">Lists</a>
+<a target="_top" href="comingsoon.html">Unordered Lists</a>
+<a target="_top" href="comingsoon.html">Ordered Lists</a>
+<a target="_top" href="comingsoon.html">Other Lists</a>
+</div>
+<a target="_top" href="comingsoon.html">HTML Block &amp; Inline</a>
+<a target="_top" href="comingsoon.html">HTML Classes</a>
+<a target="_top" href="comingsoon.html">HTML Id</a>
+<a target="_top" href="comingsoon.html">HTML Iframes</a>
+<a target="_top" href="comingsoon.html">HTML JavaScript</a>
+<a target="_top" href="comingsoon.html">HTML File Paths</a>
+<a target="_top" href="comingsoon.html">HTML Head</a>
+<a target="_top" href="comingsoon.html">HTML Layout</a>
+<a target="_top" href="comingsoon.html">HTML Responsive</a>
+<a target="_top" href="comingsoon.html">HTML Computercode</a>
+<a target="_top" href="comingsoon.html">HTML Semantics</a>
+<a target="_top" href="comingsoon.html">HTML Style Guide</a>
+<a target="_top" href="comingsoon.html">HTML Entities</a>
+<a target="_top" href="comingsoon.html">HTML Symbols</a>
+<a target="_top" href="comingsoon.html">HTML Emojis</a>
+<a target="_top" href="comingsoon.html">HTML Charset</a>
+<a target="_top" href="comingsoon.html">HTML URL Encode</a>
+<a target="_top" href="comingsoon.html">HTML vs. XHTML</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Forms</h2>
+<a target="_top" href="comingsoon.html">HTML Forms</a>
+<a target="_top" href="comingsoon.html">HTML Form Attributes</a>
+<a target="_top" href="comingsoon.html">HTML Form Elements</a>
+<a target="_top" href="comingsoon.html">HTML Input Types</a>
+<a target="_top" href="comingsoon.html">HTML Input Attributes</a>
+<a target="_top" href="comingsoon.html">HTML Input Form Attributes</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Graphics</h2>
+<a target="_top" href="comingsoon.html">HTML Canvas</a>
+<a target="_top" href="comingsoon.html">HTML SVG</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Media</h2>
+<a target="_top" href="comingsoon.html">HTML Media</a>
+<a target="_top" href="comingsoon.html">HTML Video</a>
+<a target="_top" href="comingsoon.html">HTML Audio</a>
+<a target="_top" href="comingsoon.html">HTML Plug-ins</a>
+<a target="_top" href="comingsoon.html">HTML YouTube</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> APIs</h2>
+<a target="_top" href="comingsoon.html">HTML Geolocation</a>
+<a target="_top" href="comingsoon.html">HTML Drag/Drop</a>
+<a target="_top" href="comingsoon.html">HTML Web Storage</a>
+<a target="_top" href="comingsoon.html">HTML Web Workers</a>
+<a target="_top" href="comingsoon.html">HTML SSE</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Examples</h2>
+<a target="_top" href="comingsoon.html">HTML Examples</a>
+<a target="_top" href="comingsoon.html">HTML Quiz</a>
+<a target="_top" href="comingsoon.html">HTML Exercises</a>
+<a target="_top" href="comingsoon.html">HTML Certificate</a>
+<a target="_top" href="comingsoon.html">HTML Summary</a>
+<a target="_top" href="comingsoon.html">HTML Accessibility</a>
+<br>
+<br>
+    </div>
+  </div>
+</div>
+<div class='cool-main cool-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='cool-row cool-white'>
+    <div class='cool-col l10 m12' id='main'>
+      <div id='mainLeaderboard' style='overflow:hidden;'>
+        <!-- MainLeaderboard-->
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="adngin-main_leaderboard-0"></div>
+        <!-- adspace leaderboard -->
+
+      </div>
+<h1>HTML <span class="color_h1">Attributes</span></h1>
+<div class="cool-clear nextprev">
+<a class="cool-left cool-btn" href="html_elements.html">&#10094; Previous</a>
+<a class="cool-right cool-btn" href="html_heading.html">Next &#10095;</a>
+</div>
+<hr>
+<p class="intro">HTML attributes provide additional information about HTML elements.</p>
+<hr>
+
+<h2>HTML Attributes</h2>
+<ul>
+  <li>All HTML elements can have <b>attributes</b></li>
+  <li>Attributes provide <b>additional information</b> about elements</li>
+  <li>Attributes are always specified in <b>the start tag</b></li>
+  <li>Attributes usually come in name/value pairs like: <b>name=&quot;value&quot;</b></li>
+</ul>
+<hr>
+<h2>The href Attribute</h2>
+<p>The <code class="cool-codespan">&lt;a&gt;</code> tag defines a hyperlink. The 
+<code class="cool-codespan">href</code> attribute specifies the URL of the page 
+the link goes to:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;a href=&quot;https://www.Coolhacker.com&quot;&gt;Visit Coolhacker&lt;/a&gt;
+</div>
+
+</div>
+<p>You will learn more about links in our <a href="html_links.html">HTML Links
+chapter</a>.</p>
+<hr>
+<h2>The src Attribute</h2>
+<p>The <code class="cool-codespan">&lt;img&gt;</code> tag is used to embed an 
+image in an HTML page. The <code class="cool-codespan">src</code> attribute 
+specifies the path to the image to be displayed:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;img src=&quot;images/pic-3.png&quot;&gt;
+</div>
+
+</div>
+<p>There are two ways to specify the URL in the <code class="cool-codespan">src</code> 
+attribute:</p>
+<p><strong>1. Absolute URL</strong> - Links to an external image that is hosted 
+on another website. Example: <span style="word-wrap: break-word;">src=&quot;https://www.Coolhacker.com/images/img_girl.jpg&quot;</span>.</p>
+<p><strong>Notes:</strong> External images might be under copyright. If you do 
+not get permission to use it, you may be in violation of copyright laws. In 
+addition, you cannot control external images; it can suddenly be removed or 
+changed.</p>
+<p><strong>2. Relative URL</strong> - Links to an image that is hosted within 
+the website. Here, the URL does not include the domain name. If the URL begins 
+without a slash, it will be relative to the current page. Example: src=&quot;img_girl.jpg&quot;. 
+If the URL begins with a slash, it will be relative to the domain. Example: src=&quot;/images/img_girl.jpg&quot;.</p>
+<p><strong>Tip:</strong> It is almost always best to use relative URLs. They 
+will not break if you change domain.</p>
+<hr>
+<h2>The width and height Attributes</h2>
+<p>The <code class="cool-codespan">&lt;img&gt;</code> tag should also contain the
+<code class="cool-codespan">width</code> and <code class="cool-codespan">
+height</code> attributes, which specifies the width and 
+height of the image (in pixels):</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+&lt;img src=&quot;img_girl.jpg&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;
+</div>
+
+</div>
+<hr>
+
+<h2>The alt Attribute</h2>
+<p>The required <code class="cool-codespan">alt</code> attribute for the <code class="cool-codespan">&lt;img&gt;</code> 
+tag specifies an 
+alternate text for an image, if the image for some reason cannot be displayed. 
+This can be due to 
+slow connection, or an error in the <code class="cool-codespan">src</code> attribute, or if the user uses a screen 
+reader.</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+ &lt;img src=&quot;img_girl.jpg&quot; alt=&quot;Girl 
+  with a jacket&quot;&gt;
+</div>
+
+</div>
+
+<div class="cool-example">
+<h3>Example</h3>
+<p>See what happens if we try to display an image that does not exist:</p>
+<div class="cool-code notranslate htmlHigh">
+ &lt;img src=&quot;img_typo.jpg&quot; alt=&quot;Girl 
+  with a jacket&quot;&gt;
+</div>
+</div>
+<p>You will learn more about images in our <a href="html_images.asp">HTML Images chapter</a>.</p>
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+  <div id="adngin-mid_content-0"></div>
+  
+</div>
+<hr>
+
+<h2>The style Attribute</h2>
+<p>The <code class="cool-codespan">style</code> attribute is used to add styles to 
+an element, such as color, font, size, and more.</p>
+<div class="cool-example">
+<h3>Example</h3>
+  <div class="cool-code notranslate htmlHigh">
+&lt;p style=&quot;color:red;&quot;&gt;This is a red paragraph.&lt;/p&gt;
+  </div>
+</div>
+<p>You will learn more about styles in our <a href="html_styles.asp">HTML Styles chapter</a>.</p>
+<hr>
+
+<h2>The lang Attribute</h2>
+<p>You should always include the <code class="cool-codespan">lang</code> attribute 
+inside the <code class="cool-codespan">&lt;html&gt;</code> tag, to declare the 
+language of the Web page. This is meant to assist search engines and browsers.</p>
+<p>The following example specifies English as the language:</p>
+<div class="cool-example">
+<div class="cool-code notranslate htmlHigh">
+&lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;en&quot;&gt;<br>&lt;body&gt;<br>...<br>&lt;/body&gt;<br>&lt;/html&gt;
+</div>
+</div>
+<p>Country codes can also be added to the language code in the <code class="cool-codespan">lang</code> 
+attribute. So, the first two characters define the language of the HTML page, 
+and the last two characters define the country.</p>
+<p>The following example specifies English as the language and United States as 
+the country:</p>
+<div class="cool-example">
+<div class="cool-code notranslate htmlHigh">
+&lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;en-US&quot;&gt;<br>&lt;body&gt;<br>...<br>&lt;/body&gt;<br>&lt;/html&gt;
+</div>
+</div>
+<p>You can see all the language codes in our
+<a href="#">HTML Language Code Reference</a>.</p>
+<hr>
+
+<h2>The title Attribute</h2>
+<p>The <code class="cool-codespan">title</code> attribute defines some extra 
+information about an 
+element.</p>
+<p>The value of the title attribute will be displayed as a tooltip when 
+you mouse over the element:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+ &lt;p title="I'm a tooltip"&gt;This is a paragraph.&lt;/p&gt;
+</div>
+</div>
+<hr>
+
+<h2>We Suggest: Always Use Lowercase Attributes</h2>
+<p>The HTML standard does not require lowercase attribute names.</p>
+<p>The title attribute (and all other attributes) can be written with uppercase or lowercase 
+like <strong>title</strong> or <strong>TITLE</strong>.</p>
+<div class="cool-panel cool-note">
+  <p>At Coolhacker we always use lowercase attribute names.</p>
+</div>
+<hr>
+
+<h2>We Suggest: Always Quote Attribute Values</h2>
+<p>The HTML standard does not require quotes around attribute values.</p>
+<div class="cool-example">
+<h3>Good:</h3>
+<div class="cool-code notranslate htmlHigh">
+  &lt;a href=&quot;https://www.Coolhacker.com/html/&quot;&gt;Visit our HTML tutorial&lt;/a&gt;</div></div>
+<div class="cool-example">
+<h3>Bad:</h3>
+<div class="cool-code notranslate htmlHigh">
+  &lt;a href=https://www.Coolhacker.com/html/&gt;Visit our HTML tutorial&lt;/a&gt;</div></div>
+<p>Sometimes you have to use quotes. This example will not display 
+the title attribute correctly, because it contains a space:</p>
+<div class="cool-example">
+<h3>Example</h3>
+<div class="cool-code notranslate htmlHigh">
+ &lt;p
+ title=About Coolhacker&gt;</div>
+</div>
+<div class="cool-panel cool-note">
+  <p>&nbsp;At Coolhacker we always use quotes around attribute values.</p>
+</div>
+<hr>
+
+<h2>Single or Double Quotes?</h2>
+<p>Double quotes around attribute values are the most common in HTML, but single 
+quotes can also be used.</p>
+<p>In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes:</p>
+<div class="cool-example">
+<div class="cool-code notranslate htmlHigh">
+&lt;p title='Ramesh &quot;ShotGun&quot; Mukesh'&gt;
+</div>
+</div>
+
+<p>Or vice versa:</p>
+
+<div class="cool-example">
+<div class="cool-code notranslate htmlHigh">
+&lt;p title=&quot;Ramesh 'ShotGun' Mukesh&quot;&gt;</div>
+</div>
+<hr>
+
+<h2>Chapter Summary</h2>
+<ul>
+  <li>All HTML elements can have <strong>attributes</strong></li>
+  <li>The <code class="cool-codespan">href</code> attribute of <code class="cool-codespan">
+  &lt;a&gt;</code> specifies the URL of the page the link goes to</li>
+  <li>The <code class="cool-codespan">src</code> attribute of <code class="cool-codespan">
+  &lt;img&gt;</code> specifies the path to the image to be displayed</li>
+  <li>The <code class="cool-codespan">width</code> and <code class="cool-codespan">height</code> attributes 
+  of <code class="cool-codespan">&lt;img&gt;</code> provide size information for images</li>
+  <li>The <code class="cool-codespan">alt</code> attribute of <code class="cool-codespan">
+  &lt;img&gt;</code> provides an alternate text for an image</li>
+  <li>The <code class="cool-codespan">style</code> attribute is used to add styles 
+  to an element, such as color, font, size, and more</li>
+  <li>The <code class="cool-codespan">lang</code> attribute 
+  of the <code class="cool-codespan">&lt;html&gt;</code> tag declares the 
+  language of the Web page</li>
+  <li>The <code class="cool-codespan">title</code> attribute defines some extra 
+  information about an element</li>
+</ul>
+<hr>
+<br>
+<div class="cool-clear nextprev">
+<a class="cool-left cool-btn" href="html_elements.html">&#10094; Previous</a>
+<a class="cool-right cool-btn" href="html_heading.html">Next &#10095;</a>
+</div>
+<div id="mypagediv2" style="position:relative;text-align:center;"></div>
+<br>
+
+</div>
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+  <div id="stickyadcontainer">
+    <div style="position:relative;margin:auto;">
+      
+      <div id="adngin-sidebar_sticky-0"></div>
+        <script>
+        function secondSnigel() {
+          if(window.adngin && window.adngin.adnginLoaderReady) {
+            if (Number(cool_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {         
+              if (document.getElementById("adngin-mid_content-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+              } else {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+              }
+            } else {
+              if (document.getElementById("adngin-mid_content-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+              }
+            }
+          } else {
+            window.addEventListener('adnginLoaderReady', function() {
+              if (Number(cool_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+                if (document.getElementById("adngin-mid_content-0")) {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+                } else {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+                }
+              } else {
+                if (document.getElementById("adngin-mid_content-0")) {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+                }
+              }
+            });
+          }
+        }
+      </script>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+uic_r_c()
+</script>
+
+</div>
+</div>
+<script>
+  MyLearning.loadUser('footer');
+  function docReady(fn) {
+    document.addEventListener("DOMContentLoaded", fn);
+    if (document.readyState === "interactive" || document.readyState === "complete" ) {
+      fn();
+    }
+  }
+  uic_r_z();
+  uic_r_d()
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
